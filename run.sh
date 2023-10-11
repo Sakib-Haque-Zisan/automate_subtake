@@ -55,7 +55,7 @@ if [ ! -f "$url/recon/potential_takeovers/potential_takeovers.txt" ];then
 	touch $url/recon/potential_takeovers/potential_takeovers.txt
 fi
  
-subjack -w $url/recon/final.txt -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/fingerprints.json -v 3 -o $url/recon/potential_takeovers/potential_takeovers.txt
+subjack -w $url/recon/final.txt -t 100 -timeout 30 -ssl -v 3 -o $url/recon/potential_takeovers/potential_takeovers.txt
  
 echo "[+] Scanning for open ports..."
 nmap -iL $url/recon/httprobe/alive.txt -T4 -oA $url/recon/scans/scanned.txt
