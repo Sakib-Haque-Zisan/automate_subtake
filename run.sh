@@ -60,7 +60,7 @@ touch $url/recon/sub_takeovers/sub_takeovers.txt
 
 fi
 
-subjack -w $url/recon/final.txt -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/blob/master/fingerprints.json -v 3 -o
+subjack -w $url/recon/final.txt -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/fingerprints.json -v 3 -o
 $url/recon/sub_takeovers/sub_takeovers.txt 
 
 echo "[+] Scanning for Open Ports..."
